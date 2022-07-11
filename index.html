@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="r" v-bind:age="nnn" :aa="nnn">
+        {{nnn}}
+        <input type="text" name="" v-model="nnn" id="">
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        var x = new Vue({
+            data() {
+                return {
+                    nnn: '梁思宇小肥猪'
+                }
+            }
+        });
+        x.$mount('#r');
+    </script>
+</body>
+
+</html>
