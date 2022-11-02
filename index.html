@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <script>
+        Vue.config.productionTip = false;
+    </script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>{{abc}}</h1>
+        <zu1></zu1>
+        <zu2></zu2>
+        <App></App>
+    </div>
+
+    <script>
+        var zu1 = Vue.extend({
+            name:'Zu1',
+            template:`<h1>{{mingzi}}</h1>`,
+            data(){
+                return {
+                    mingzi:'zu1aaa'
+                }
+            }
+        });
+        var zu2 = Vue.extend({
+            name:'zu2',
+            template:`<h2>{{mingzi}}</h2>`,
+            data(){
+                return {
+                    mingzi:'zu2aaa'
+                }
+            }
+        });
+        var vm = new Vue({
+            el: '#root',
+            data:{
+                abc:'组件1和2'
+            },
+            components:{
+                zu1,zu2
+            }
+        });
+    </script>
+</body>
+
+</html>
